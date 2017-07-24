@@ -45,5 +45,9 @@
 		* _**BraveKnight并不与Quest的任何Implementation耦合, 这是DI的最大好处，去耦合.**_
 		* **If an object only knows about its dependencies by their interace (not by their implementation or how they're instantiated), then the dependency can be swapped out with a different implementation without the depending object know the difference**
 	6. **Wiring**
-		
+		1. The act of creating associations between application components is commonly refered as wiring. 
+		2. Spring中可以通过xml文件，也可以通过@Configuratin注解的class来完成wire的步骤.
+		3. 依赖方并不知道如何创建以及创建哪种具体的接口，只有DI container(Spring)知道how all the pieces come together. 
+		4. (Spring-Specic) 
+			Spring中有一种ApplicationContext，完全负责objects的creation和wiring.它有几种不同的implementation.例如当beans在xml中被声明时，ApplicationContext可能是ClassPathXmlApplicationContext. 
 
